@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PS2 Browser Store</title>
+    <title>Site Rules & Terms</title>
     <style>
         body {
             background-color: #003366;
@@ -11,82 +11,30 @@
             padding: 0;
         }
         .header {
-            background: url('header-background.png') no-repeat center;
-            height: 100px;
+            background-color: #002244;
             text-align: center;
-            padding-top: 20px;
+            padding: 20px;
         }
         .header a {
-            display: inline-block;
-        }
-        .header img {
-            height: 60px;
-        }
-        .menu {
-            width: 200px;
-            float: left;
-            background-color: #002244;
-            padding: 10px;
-            height: calc(100vh - 100px);
-        }
-        .menu a {
-            display: block;
             color: white;
             text-decoration: none;
-            padding: 10px;
-            border: 1px solid white;
-            margin: 5px 0;
-            text-align: center;
-        }
-        .menu a:hover {
-            background-color: #004488;
-        }
-        .menu a.active {
-            background-color: #0055aa;
-            font-weight: bold;
-        }
-        .guides {
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid white;
-        }
-        .guides h3 {
-            color: #aabbcc;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-        .terms {
-            margin-top: 20px;
-            padding-top: 10px;
-            border-top: 1px solid white;
-            text-align: center;
+            font-size: 24px;
         }
         .content {
-            margin-left: 220px;
-            padding: 10px;
-            height: calc(100vh - 100px);
-            overflow-y: auto;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
         }
-        .game-box {
-            display: inline-block;
-            width: 200px;
-            margin: 10px;
-            text-align: center;
-            background-color: #001122;
-            padding: 10px;
-            border: 1px solid white;
-        }
-        .game-box img {
-            width: 100%;
-            height: auto;
-        }
-        .game-title {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        .game-author {
-            font-size: 12px;
+        h1, h2 {
             color: #aabbcc;
+        }
+        a {
+            color: #aabbcc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
         .footer {
             background-color: #002244;
@@ -98,61 +46,22 @@
             color: white;
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentPage = window.location.pathname.split('/').pop();
-            const menuLinks = document.querySelectorAll('.menu a');
-            menuLinks.forEach(link => {
-                if (link.getAttribute('href') === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <div class="header">
-        <a href="index.html">
-            <img src="logo.png" alt="PS2 Browser Store Logo">
-        </a>
-    </div>
-    <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="Apps.html">Apps</a>
-        <a href="Homebrew-Games.html">Homebrew Games</a>
-        <a href="Themes.html">Themes</a>
-        <a href="Plug-Ins.html">Plug Ins</a>
-        <div class="guides">
-            <h3>Guides & Support</h3>
-            <a href="XEB+GUIDE.html">XEB+ Setup guide</a>
-            <a href="XEB+Downloads.html">XEB+ Download</a>
-        </div>
-        <div class="terms">
-            <a href="terms.html">Store Rules & Terms</a>
-        </div>
+        <a href="index.html">XEB+ Store</a>
     </div>
     <div class="content">
-        <div id="game1" class="game-box">
-            <a href="warhawk.html">
-                <img src="warhawk.jpg" alt="Warhawk">
-                <div class="game-title">Warhawk</div>
-                <div class="game-author">Author: Incognito Entertainment</div>
-            </a>
-        </div>
-        <div id="game2" class="game-box">
-            <a href="gran-turismo.html">
-                <img src="gran-turismo.jpg" alt="Gran Turismo 5 Prologue">
-                <div class="game-title">Gran Turismo 5 Prologue</div>
-                <div class="game-author">Author: Polyphony Digital</div>
-            </a>
-        </div>
-        <div id="game3" class="game-box">
-            <a href="pain.html">
-                <img src="pain.jpg" alt="Pain">
-                <div class="game-title">Pain</div>
-                <div class="game-author">Author: Idol Minds</div>
-            </a>
-        </div>
+        <h1>Site Rules & Terms</h1>
+        <h2>Welcome to the XEB+ Store</h2>
+        <p>By accessing and using this site, you agree to abide by the following rules and terms:</p>
+        <ul>
+            <li>We do not allow any apps, games, or other content that utilizes copyrighted material without proper authorization.</li>
+            <li>If you believe your app or content has been included on this site without your consent, please contact us directly on Discord at <strong>pmp174</strong>.</li>
+            <li>All users are responsible for ensuring their submissions comply with applicable copyright laws.</li>
+            <li>The XEB+ Store reserves the right to remove any content that violates these rules or for any other reason deemed necessary.</li>
+        </ul>
+        <p>Thank you for helping us maintain a community that respects intellectual property and fosters creativity.</p>
     </div>
     <div class="footer">
         &copy; 2024 XEB+ Store by Pmp174
