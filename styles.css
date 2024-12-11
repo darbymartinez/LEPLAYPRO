@@ -4,3 +4,14 @@ body{
 .title {
 	color: #5C6AC4;
 }
+.menu {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push content to the top and bottom */
+    background-color: transparent;
+    padding: 10px;
+    height: calc(100vh - 180px); /* Automatically adjust based on window height */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
