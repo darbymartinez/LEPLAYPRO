@@ -72,43 +72,30 @@
             height: calc(100vh - 100px);
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 8px; /* Top and bottom spacing set to 8px */
-            box-sizing: border-box; /* Ensures a consistent minimum height */
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 8px; /* Top and bottom spacing set to 8px */
-            box-sizing: border-box;
+            grid-gap: 8px; /* Top, bottom, and sides spacing set to 8px */
             box-sizing: border-box;
         }
         .game-box {
             background-color: #001122;
-            border-radius: 10px;
+            border-radius: 50%;
+            width: 100%;
             padding: 10px;
             position: relative;
             overflow: hidden;
-            width: 100%; /* Takes the full column width */
-            aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+            aspect-ratio: 1 / 1; /* Makes the game-box a circle */
             text-align: center;
-            transition: box-shadow 1.5s ease-in-out;
-        }
-        .game-box.large {
-            grid-column: span 3; /* Spans all three columns for the larger box */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
         }
         .game-box:hover {
-            box-shadow: 0 0 10px 1px white;
+            box-shadow: 0 0 10px 2px white;
+            transform: scale(1.05); /* Slight zoom effect on hover */
         }
         .game-box img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .game-title {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-        .game-author {
-            font-size: 12px;
-            color: #aabbcc;
+            height: 100%;
+            border-radius: 50%; /* Makes the image circular */
+            object-fit: cover; /* Ensures the image fills the circle */
         }
         .footer {
             background-color: #D2DDF0;
@@ -129,7 +116,7 @@
             }
         }
 
-        .menu a:hover, .game-box:hover {
+        .menu a:hover {
             animation: blink 1.5s infinite;
         }
     </style>
@@ -164,29 +151,21 @@
         <div id="game1" class="game-box">
             <a href="warhawk.html">
                 <img src="warhawk.jpg" alt="Warhawk">
-                <div class="game-title">Warhawk</div>
-                <div class="game-author">Author: Incognito Entertainment</div>
             </a>
         </div>
         <div id="game2" class="game-box">
             <a href="gran-turismo.html">
                 <img src="gran-turismo.jpg" alt="Gran Turismo 5 Prologue">
-                <div class="game-title">Gran Turismo 5 Prologue</div>
-                <div class="game-author">Author: Polyphony Digital</div>
             </a>
         </div>
         <div id="game3" class="game-box">
             <a href="pain.html">
                 <img src="pain.jpg" alt="Pain">
-                <div class="game-title">Pain</div>
-                <div class="game-author">Author: Idol Minds</div>
             </a>
         </div>
-        <div id="game4" class="game-box large">
+        <div id="game4" class="game-box">
             <a href="gran-turismo.html">
                 <img src="gran-turismo.jpg" alt="Gran Turismo 5 Prologue">
-                <div class="game-title">Gran Turismo 5 Prologue</div>
-                <div class="game-author">Author: Polyphony Digital</div>
             </a>
         </div>
     </div>
