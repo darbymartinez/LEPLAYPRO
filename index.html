@@ -133,12 +133,18 @@
             right: 10px;
             width: 40px;
             height: 40px;
-            background-color: #497BBA;
+            background-image: url('home-icon.png');
+            background-size: cover;
+            background-position: center;
             border-radius: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            transition: box-shadow 1.5s ease-in-out;
+        }
+        .home-icon:hover {
+            animation: blink 1.5s infinite;
         }
         .home-icon a {
             color: white;
