@@ -38,6 +38,10 @@
         .menu a:hover {
             background-color: #004488;
         }
+        .menu a.active {
+            background-color: #0055aa;
+            font-weight: bold;
+        }
         .content {
             margin-left: 220px;
             padding: 10px;
@@ -72,15 +76,15 @@
         }
     </style>
     <script>
-        function changeTitle(boxId, newTitle) {
-            const gameBox = document.getElementById(boxId);
-            if (gameBox) {
-                const titleElement = gameBox.querySelector('.game-title');
-                if (titleElement) {
-                    titleElement.textContent = newTitle;
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split('/').pop();
+            const menuLinks = document.querySelectorAll('.menu a');
+            menuLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
                 }
-            }
-        }
+            });
+        });
     </script>
 </head>
 <body>
@@ -88,10 +92,11 @@
         <img src="logo.png" alt="PS2 Browser Store Logo">
     </div>
     <div class="menu">
-        <a href="#latest">Apps</a>
-        <a href="#all-games">Homebrew Games</a>
-        <a href="#addons">Themes</a>
-        <a href="#psp-games">Plug Ins</a>
+        <a href="index.html">Home</a>
+        <a href="Apps.html">Apps</a>
+        <a href="Homebrew-Games.html">Homebrew Games</a>
+        <a href="Themes.html">Themes</a>
+        <a href="Plug-Ins.html">Plug Ins</a>
     </div>
     <div class="content">
         <div id="game1" class="game-box">
@@ -112,4 +117,3 @@
     </div>
 </body>
 </html>
-
