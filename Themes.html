@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PS2 Browser Store</title>
+    <style>
+        body {
+            background-color: #003366;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: url('header-background.png') no-repeat center;
+            height: 100px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .header img {
+            height: 60px;
+        }
+        .menu {
+            width: 200px;
+            float: left;
+            background-color: #002244;
+            padding: 10px;
+            height: calc(100vh - 100px);
+        }
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid white;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .menu a:hover {
+            background-color: #004488;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 10px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+        .game-box {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            background-color: #001122;
+            padding: 10px;
+            border: 1px solid white;
+        }
+        .game-box img {
+            width: 100%;
+            height: auto;
+        }
+        .game-title {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #002244;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+    </style>
+    <script>
+        function changeTitle(boxId, newTitle) {
+            const gameBox = document.getElementById(boxId);
+            if (gameBox) {
+                const titleElement = gameBox.querySelector('.game-title');
+                if (titleElement) {
+                    titleElement.textContent = newTitle;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="PS2 Browser Store Logo">
+    </div>
+    <div class="menu">
+        <a href="#latest">Apps</a>
+        <a href="#all-games">Homebrew Games</a>
+        <a href="#addons">Themes</a>
+        <a href="#psp-games">Plug Ins</a>
+    </div>
+    <div class="content">
+        <div id="game1" class="game-box">
+            <img src="warhawk.jpg" alt="Warhawk">
+            <div class="game-title">Warhawk</div>
+        </div>
+        <div id="game2" class="game-box">
+            <img src="gran-turismo.jpg" alt="Gran Turismo 5 Prologue">
+            <div class="game-title">Gran Turismo 5 Prologue</div>
+        </div>
+        <div id="game3" class="game-box">
+            <img src="pain.jpg" alt="Pain">
+            <div class="game-title">Pain</div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 PS2 Browser Store
+    </div>
+</body>
+</html>
+
