@@ -71,11 +71,13 @@
             padding: 10px;
             height: calc(100vh - 100px);
             overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
         .game-box {
-            display: inline-block;
-            width: 200px; /* Fixed width for small game boxes */
-            height: 200px; /* Fixed height for consistency */
+            flex: 0 0 calc(33.33% - 20px);
+            height: 200px;
             margin: 10px;
             text-align: center;
             background-color: #001122;
@@ -84,9 +86,9 @@
             transition: box-shadow 1.5s ease-in-out;
         }
         .game-box.large {
-            width: 640px; /* Fixed width to match the combined width of three small boxes */
-            height: 200px; /* Same height as a small game box */
-            margin: 20px auto;
+            flex: 0 0 100%;
+            height: 200px;
+            margin: 20px 0;
         }
         .game-box:hover {
             box-shadow: 0 0 10px 1px white;
