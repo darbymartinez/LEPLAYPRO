@@ -19,20 +19,27 @@ body {
 }
 
 .scrolling-text {
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 20px;
-  animation: scroll-up 5s linear infinite; /* Fixed animation issue */
-  margin-left: 8px; /* Adjust spacing */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    height: 20px; /* Match icon height */
+    color: black;
 }
 
-@keyframes scroll-up {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+.scrolling-text span {
+    position: absolute;
+    display: inline-block;
+    animation: scroll-horizontal 10s linear infinite;
 }
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 
