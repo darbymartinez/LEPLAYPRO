@@ -74,7 +74,8 @@
         }
         .game-box {
             display: inline-block;
-            width: 200px;
+            width: 200px; /* Fixed width for small game boxes */
+            height: 200px; /* Fixed height for consistency */
             margin: 10px;
             text-align: center;
             background-color: #001122;
@@ -83,8 +84,8 @@
             transition: box-shadow 1.5s ease-in-out;
         }
         .game-box.large {
-            width: calc(100% - 40px);
-            height: calc(200px + 20px); /* Adjusting height to match three small game boxes */
+            width: 640px; /* Fixed width to match the combined width of three small boxes */
+            height: 200px; /* Same height as a small game box */
             margin: 20px auto;
         }
         .game-box:hover {
