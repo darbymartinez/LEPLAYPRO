@@ -1,31 +1,38 @@
-body{
+body {
   padding: 25px;
 }
+
 .title {
-	color: #5C6AC4;
+  color: #5C6AC4;
 }
+
 .menu {
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Push content to the top and bottom */
-    background-color: transparent;
-    padding: 10px;
-    height: calc(100vh - 180px); /* Automatically adjust based on window height */
-    border-radius: 10px;
-    box-sizing: border-box;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push content to the top and bottom */
+  background-color: transparent;
+  padding: 10px;
+  height: calc(100vh - 180px); /* Automatically adjust based on window height */
+  border-radius: 10px;
+  box-sizing: border-box;
 }
+
 .scrolling-text {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: scroll-up 5s linear infinite;
-    margin-left: 8px; /* Adjust spacing */
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 20px;
+  animation: scroll-up 5s linear infinite; /* Fixed animation issue */
+  margin-left: 8px; /* Adjust spacing */
 }
 
 @keyframes scroll-up {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-100%); }
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
-
 
