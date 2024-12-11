@@ -11,14 +11,16 @@
             padding: 0;
         }
         .header {
-            background-color: #002244;
+            background: url('header-background.png') no-repeat center;
+            height: 100px;
             text-align: center;
-            padding: 20px;
+            padding-top: 20px;
         }
         .header a {
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
+            display: inline-block;
+        }
+        .header img {
+            height: 60px;
         }
         .menu {
             width: 200px;
@@ -61,9 +63,9 @@
         }
         .content {
             margin-left: 220px;
-            padding: 20px;
-            max-width: 800px;
-            line-height: 1.6;
+            padding: 10px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
         }
         h1, h2 {
             color: #aabbcc;
@@ -88,10 +90,23 @@
             color: white;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = window.location.pathname.split('/').pop();
+            const menuLinks = document.querySelectorAll('.menu a');
+            menuLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="header">
-        <a href="index.html">PS2 Browser Store</a>
+        <a href="index.html">
+            <img src="logo.png" alt="PS2 Browser Store Logo">
+        </a>
     </div>
     <div class="menu">
         <a href="index.html">Home</a>
@@ -157,7 +172,7 @@
         </div>
     </div>
     <div class="footer">
-        &copy; 2024 PS2 Browser Store
+        &copy; 2024 XEB+ Store by Pmp174
     </div>
 </body>
 </html>
