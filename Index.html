@@ -1,133 +1,119 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+    <title>PS2 Browser Store</title>
+    <style>
+        body {
+            background-color: #003366;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: url('header-background.png') no-repeat center;
+            height: 100px;
+            text-align: center;
+            padding-top: 20px;
+        }
+        .header img {
+            height: 60px;
+        }
+        .menu {
+            width: 200px;
+            float: left;
+            background-color: #002244;
+            padding: 10px;
+            height: calc(100vh - 100px);
+        }
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border: 1px solid white;
+            margin: 5px 0;
+            text-align: center;
+        }
+        .menu a:hover {
+            background-color: #004488;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 10px;
+            height: calc(100vh - 100px);
+            overflow-y: auto;
+        }
+        .game-box {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+            background-color: #001122;
+            padding: 10px;
+            border: 1px solid white;
+        }
+        .game-box img {
+            width: 100%;
+            height: auto;
+        }
+        .game-title {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .footer {
+            background-color: #002244;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            color: white;
+        }
+    </style>
+    <script>
+        function changeTitle(boxId, newTitle) {
+            const gameBox = document.getElementById(boxId);
+            if (gameBox) {
+                const titleElement = gameBox.querySelector('.game-title');
+                if (titleElement) {
+                    titleElement.textContent = newTitle;
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;PS2 Browser Store&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #003366;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: url('header-background.png') no-repeat center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 100px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 20px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.header img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: 60px;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.menu {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>float: left;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #002244;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: calc(100vh - 100px);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.menu a {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-decoration: none;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 5px 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.menu a:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #004488;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.content {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin-left: 220px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: calc(100vh - 100px);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.game-box {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 200px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #001122;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid white;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.game-box img {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>height: auto;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.game-title {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>margin: 10px 0;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.footer {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #002244;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>bottom: 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function changeTitle(boxId, newTitle) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const gameBox = document.getElementById(boxId);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (gameBox) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const titleElement = gameBox.querySelector('.game-title');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (titleElement) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>titleElement.textContent = newTitle;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="header"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;img src="logo.png" alt="PS2 Browser Store Logo"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="menu"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#latest"&gt;Latest&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#all-games"&gt;All Games&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#addons"&gt;Game Add-Ons&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#psp-games"&gt;PSP Games&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#family-games"&gt;Family Games&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#videos"&gt;Videos&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#other-media"&gt;Other Media&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a href="#recommend"&gt;We Recommend&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="content"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="game1" class="game-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="warhawk.jpg" alt="Warhawk"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="game-title"&gt;Warhawk&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="game2" class="game-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="gran-turismo.jpg" alt="Gran Turismo 5 Prologue"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="game-title"&gt;Gran Turismo 5 Prologue&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="game3" class="game-box"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;img src="pain.jpg" alt="Pain"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="game-title"&gt;Pain&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="footer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&amp;copy; 2024 PS2 Browser Store</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+    <div class="header">
+        <img src="logo.png" alt="PS2 Browser Store Logo">
+    </div>
+    <div class="menu">
+        <a href="#latest">Latest</a>
+        <a href="#all-games">All Games</a>
+        <a href="#addons">Game Add-Ons</a>
+        <a href="#psp-games">PSP Games</a>
+        <a href="#family-games">Family Games</a>
+        <a href="#videos">Videos</a>
+        <a href="#other-media">Other Media</a>
+        <a href="#recommend">We Recommend</a>
+    </div>
+    <div class="content">
+        <div id="game1" class="game-box">
+            <img src="warhawk.jpg" alt="Warhawk">
+            <div class="game-title">Warhawk</div>
+        </div>
+        <div id="game2" class="game-box">
+            <img src="gran-turismo.jpg" alt="Gran Turismo 5 Prologue">
+            <div class="game-title">Gran Turismo 5 Prologue</div>
+        </div>
+        <div id="game3" class="game-box">
+            <img src="pain.jpg" alt="Pain">
+            <div class="game-title">Pain</div>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2024 PS2 Browser Store
+    </div>
 </body>
 </html>
+
