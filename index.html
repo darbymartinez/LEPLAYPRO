@@ -70,7 +70,11 @@
             margin-left: 220px;
             padding: 20px 40px 40px 20px; /* Increased bottom padding */
             height: calc(100vh - 100px);
-            min-height: 300px; /* Ensures a consistent minimum height */
+            max-height: 8px; /* Limit the maximum height */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 8px;
+            box-sizing: border-box; /* Ensures a consistent minimum height */
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 8px; /* Top and bottom spacing set to 8px */
