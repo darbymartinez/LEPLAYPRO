@@ -15,39 +15,3 @@ body{
     border-radius: 10px;
     box-sizing: border-box;
 }
-.home-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 40px;
-    height: 40px;
-    background-image: url('home-icon.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 1.5s ease-in-out;
-}
-
-.home-icon:hover {
-    animation: blink 1.5s infinite;
-}
-
-.home-icon a {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-@keyframes blink {
-    0%, 100% {
-        box-shadow: 0 0 10px 1px white;
-    }
-    50% {
-        box-shadow: 0 0 5px 0.5px white;
-    }
-}
