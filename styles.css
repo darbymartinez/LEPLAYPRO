@@ -10,30 +10,6 @@ body {
   color: #5C6AC4;
 }
 
-.header {
-  background: url('header-background.png') no-repeat center;
-  height: 80px;
-  text-align: left;
-  display: flex;
-  flex-direction: column; /* Stack logo and menu vertically */
-  align-items: flex-start; /* Align to the start of the container */
-  padding: 8px 20px; /* Reduced padding */
-  margin-bottom: 0; /* Remove extra space below the header */
-}
-
-.header a {
-  display: inline-block;
-  background: linear-gradient(to bottom, #E1EAF6, #9EBDD9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.header img {
-  height: 60px;
-  display: block;
-  margin-bottom: 8px; /* 8px gap between the logo and the menu */
-}
-
 .menu {
   width: 200px;
   display: flex;
