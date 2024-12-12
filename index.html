@@ -16,7 +16,7 @@
             text-align: left;
             padding-top: 8px;
             padding-left: 20px;
-            margin-bottom: 8px; /* Reduce spacing */
+            margin-bottom: 0; /* Remove any extra margin */
         }
         .header a {
             display: inline-block;
@@ -26,6 +26,8 @@
         }
         .header img {
             height: 60px;
+            display: block; /* Ensure it aligns properly above the menu */
+            margin-bottom: 8px; /* Reduce space between logo and menu */
         }
         .menu {
             width: 200px;
@@ -34,6 +36,7 @@
             padding: 10px;
             height: calc(100vh - 180px); /* Reduced to align with footer spacing */
             border-radius: 10px;
+            margin-top: 8px; /* Reduced margin between the header and menu */
         }
         .menu a {
             display: block;
