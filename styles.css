@@ -3,7 +3,7 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 25px; /* Adjusted to 25px padding */
+  padding: 25px; /* Adjusted padding */
 }
 
 .title {
@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column; /* Stack logo and menu vertically */
   align-items: flex-start; /* Align to the start of the container */
-  padding: 8px 20px; /* Reduced padding to 8px for top/bottom */
+  padding: 8px 20px; /* Reduced padding */
   margin-bottom: 0; /* Remove extra space below the header */
 }
 
@@ -41,7 +41,7 @@ body {
   justify-content: space-between; /* Push content to the top and bottom */
   background-color: transparent;
   padding: 10px;
-  height: calc(100vh - 180px); /* Automatically adjust based on window height */
+  height: calc(100vh - 180px); /* Adjust based on window height */
   border-radius: 10px;
   box-sizing: border-box;
   margin-top: 0; /* Removed extra margin */
@@ -69,7 +69,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  height: 20px; /* Match icon height */
+  height: 20px;
   color: black;
 }
 
@@ -110,11 +110,11 @@ body {
 .content {
   margin-left: 220px;
   padding: 10px;
-  padding-bottom: 80px; /* Add padding to prevent overlap */
-  height: calc(100vh - 100px);
+  height: calc(100vh - 100px - 180px); /* Full height minus header and menu */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   grid-gap: 8px;
+  grid-template-rows: auto 1fr; /* First row for game-boxes, second for text-box */
   overflow-y: auto;
 }
 
@@ -124,6 +124,7 @@ body {
   text-align: center;
   transition: box-shadow 1.5s ease-in-out;
   overflow: hidden;
+  height: 100%; /* Ensure the game-box takes up available height */
 }
 
 .game-box:hover {
@@ -140,10 +141,11 @@ body {
   padding: 10px;
   background-color: #001122;
   border-radius: 10px;
-  height: auto; /* Allow content to determine height */
+  height: 100%; /* Ensure the text-box takes up available height */
   overflow-y: auto;
   grid-column: span 3; /* Span across all three columns */
-  margin-top: 0; /* Remove any unnecessary margin */
+  grid-row: 2; /* Place it in the second row */
+  margin-top: 0;
 }
 
 .footer {
@@ -172,5 +174,3 @@ body {
 .menu a:hover, .game-box:hover {
   animation: blink 1.5s infinite;
 }
-
-
