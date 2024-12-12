@@ -4,6 +4,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 25px; /* Adjusted padding */
+  display: grid;
+  grid-template-rows: 100px 1fr 50px;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
 }
 
 .title {
@@ -11,10 +15,11 @@ body {
 }
 
 .menu {
-  width: 200px;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Push content to the top and bottom */
+  justify-content: flex-start;
   background-color: transparent;
   padding: 10px;
   height: calc(100vh - 180px); /* Adjust based on window height */
@@ -84,7 +89,8 @@ body {
 }
 
 .content {
-  margin-left: 220px;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
   padding: 10px;
   height: calc(100vh - 100px - 180px); /* Full height minus header and menu */
   display: grid;
