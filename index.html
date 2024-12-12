@@ -18,6 +18,7 @@
             height: calc(100vh - 180px); /* Reduced to align with footer spacing */
             border-radius: 10px;
             margin-top: 8px; /* Reduced margin between the header and menu */
+            padding-bottom: 8px; /* Reduced space below last menu button */
         }
         .menu a {
             display: block;
@@ -54,7 +55,7 @@
             margin-left: 220px;
             padding: 10px;
             padding-bottom: 80px; /* Add padding to prevent overlap */
-            height: calc(100vh - 100px);
+            height: calc(100vh - 180px); /* Adjusted height to match menu */
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
             grid-gap: 8px;
@@ -79,7 +80,7 @@
             padding: 10px;
             background-color: #001122;
             border-radius: 10px;
-            height: auto; /* Allow content to determine height */
+            height: calc(100vh - 180px - 20px); /* Adjusted height to match menu */
             overflow-y: auto;
             grid-column: span 3; /* Span across all three columns */
             margin-top: 0; /* Remove any unnecessary margin */

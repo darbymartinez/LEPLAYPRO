@@ -26,6 +26,7 @@ body {
   border-radius: 10px;
   box-sizing: border-box;
   margin-top: 0; /* Removed extra margin */
+  padding-bottom: 8px; /* Reduced space below last menu button */
 }
 
 .menu a {
@@ -92,7 +93,7 @@ body {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
   padding: 10px;
-  height: calc(100vh - 100px - 180px); /* Full height minus header and menu */
+  height: calc(100vh - 180px); /* Adjusted height to match menu */
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
   grid-gap: 8px;
@@ -123,7 +124,7 @@ body {
   padding: 10px;
   background-color: #001122;
   border-radius: 10px;
-  height: 100%; /* Ensure the text-box takes up available height */
+  height: calc(100vh - 180px - 20px); /* Adjusted height to match menu */
   overflow-y: auto;
   grid-column: span 3; /* Span across all three columns */
   grid-row: 2; /* Place it in the second row */
